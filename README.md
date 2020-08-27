@@ -90,6 +90,16 @@ Create three bash file on root of project
 add following content on each bash file
 
 #### up.sh
+with up.sh you can build and run your project on docker and see result of your project configuration you should 
+run up.sh with following structure
+
+./up.sh [image-name] [host_port]:9000
+
+for example
+
+./up.sh myimage 8000:9000
+
+becareful that container port must be unchanged.
 ```
 #!/bin/bash
 docker build -t $1:latest .
@@ -100,4 +110,12 @@ docker run -d  -p $2 --name $1 $1:latest
 ```
 #!/bin/bash
 docker rm -f $1
+```
+
+#### push.sh
+```
+#!/bin/bash
+registry=$2
+docker tag $1:latest $registry/$1:latest
+docker push $registry/$1:latest
 ```
