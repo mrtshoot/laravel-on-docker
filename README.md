@@ -137,6 +137,7 @@ for example
 ```
 
 ## Step6
+ignore all three script and Dockerfile on your .gitignore file and then
 git push to your origin tmaster and after everything is ok go to master.
 
 ## Author
