@@ -17,7 +17,7 @@ Start Docker service on your system and create [docker hub account](https://hub.
 ### note: on windows docker desktop please use powershell or gitbash
 
 ## Step3
-Go on your laravel project root directory and create file with name of Dockerfile(Captal D) and .dockerignore
+Go on your laravel project root directory and create file with name of Dockerfile(Captal D)
 
 ## Step4
 Add following content on your Dockerfile
@@ -85,5 +85,5 @@ USER www
 EXPOSE 9000
 CMD ["php-fpm"]
 ```
-
+## Step5
 
