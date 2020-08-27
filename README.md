@@ -17,7 +17,7 @@ Start Docker service on your system
 ### note: on windows docker desktop please use powershell or gitbash
 
 ## Step3
-Go on your laravel project root directory and create file with name of Dockerfile and .dockerignore (Captal D)
+Go on your laravel project root directory and create file with name of Dockerfile(Captal D) and .dockerignore
 
 ## Step4
 Add following content on your Dockerfile
