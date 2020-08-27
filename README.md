@@ -86,4 +86,14 @@ EXPOSE 9000
 CMD ["php-fpm"]
 ```
 ## Step5
+Create three bash file on root of project
+add following content on each bash file
+
+#### up.sh
+```
+#!/bin/bash
+docker build -t $1:latest .
+docker run -d  -p $2 --name $1 $1:latest
+```
+
 
