@@ -127,6 +127,14 @@ registry=$2
 docker tag $1:latest $registry/$1:latest
 docker push $registry/$1:latest
 ```
+if everything is ok on up.sh you should transfer your stable image on private registry with following structure
+```
+./push.sh [image-name] [private-registry-url]
+
+for example
+
+./push.sh my-image local.docker.com
+```
 
 ## Step6
 git push to your origin tmaster and after everything is ok go to master.
