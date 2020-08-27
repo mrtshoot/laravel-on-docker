@@ -13,7 +13,7 @@ First of all please install docker based on your operating system.
 [Docker on MacOS](https://docs.docker.com/docker-for-mac/install/ "Go to docker on macos installation guide page")
 
 ## Step2
-Start Docker service on your system
+Start Docker service on your system and create [docker hub account](https://hub.docker.com/signup)
 ### note: on windows docker desktop please use powershell or gitbash
 
 ## Step3
@@ -22,7 +22,7 @@ Go on your laravel project root directory and create file with name of Dockerfil
 ## Step4
 Add following content on your Dockerfile
 ```
-FROM php:7.2-fpm
+FROM mrtshoot/php:7.2-fpm
 Maintainer Mrtshoot
 
 # Copy composer.lock and composer.json
