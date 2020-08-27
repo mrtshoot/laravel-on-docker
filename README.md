@@ -97,7 +97,7 @@ run up.sh with following structure
 
 for example
 
-./up.sh myimage 8000:9000
+./up.sh myimagename 8000:9000
 
 becareful that container port must be unchanged.
 ```
