@@ -127,3 +127,9 @@ registry=$2
 docker tag $1:latest $registry/$1:latest
 docker push $registry/$1:latest
 ```
+
+## Step6
+git push to your origin tmaster and after everything is ok go to master.
+
+## Author
+Mrtshoot - mrtshoot@gmail.com
