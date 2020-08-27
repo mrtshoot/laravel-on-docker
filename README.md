@@ -26,7 +26,7 @@ FROM mrtshoot/php:7.2-fpm
 Maintainer Mrtshoot
 
 # Copy composer.lock and composer.json
-COPY ./laravel-app/composer.lock ./laravel-app/composer.json /var/www/
+COPY ./composer.lock ./composer.json /var/www/
 
 # Set working directory
 WORKDIR /var/www
@@ -67,10 +67,10 @@ RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Copy existing application directory contents
-COPY ./laravel-app /var/www
+COPY . /var/www
 
 # Copy existing application directory permissions
-COPY --chown=www:www ./laravel-app /var/www
+COPY --chown=www:www . /var/www
 
 #Add SSH Server and Requirements
 #RUN apt update && apt install openssh-server -y
@@ -85,4 +85,5 @@ USER www
 EXPOSE 9000
 CMD ["php-fpm"]
 ```
+
 
