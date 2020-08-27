@@ -90,14 +90,12 @@ Create three bash file on root of project
 add following content on each bash file
 
 #### up.sh
-with up.sh you can build and run your project on docker and see result of your project configuration.
-
 ```
 #!/bin/bash
 docker build -t $1:latest .
 docker run -d  -p $2 --name $1 $1:latest
 ```
-you should run up.sh with following structure
+with up.sh you can build and run your project on docker and see result of your project configuration.you should run up.sh with following structure
 
 ```
 ./up.sh [image-name] [host_port]:9000
@@ -108,20 +106,14 @@ for example
 ```
 
 becareful that container port must be unchanged.
-```
-#!/bin/bash
-docker build -t $1:latest .
-docker run -d  -p $2 --name $1 $1:latest
-```
 
 #### down.sh
-if you test your code and everything is ok you should down your container and run push.sh script, otherwise you should check your bug and fix it then run up.sh bash script again.
-
 ```
 #!/bin/bash
 docker rm -f $1
 ```
-you should run down.sh with following structure
+
+if you test your code and everything is ok you should down your container and run push.sh script, otherwise you should check your bug and fix it then run up.sh bash script again.you should run down.sh with following structure
 
 ```
 ./down.sh [image-name]
