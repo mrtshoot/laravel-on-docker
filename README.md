@@ -96,4 +96,8 @@ docker build -t $1:latest .
 docker run -d  -p $2 --name $1 $1:latest
 ```
 
-
+#### down.sh
+```
+#!/bin/bash
+docker rm -f $1
+```
